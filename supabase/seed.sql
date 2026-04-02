@@ -1,0 +1,87 @@
+-- Sample healer data (embeddings will be generated via API)
+insert into public.healers (name, title, bio, specialties, modalities, approach, experience_years, languages, feedback_themes, session_price, session_duration, availability, rating, review_count, is_verified)
+values
+(
+  'Dr. Maya Chen',
+  'Trauma-Informed Therapist & Somatic Healer',
+  'I specialize in helping individuals heal from complex trauma, anxiety, and life transitions using a blend of somatic therapy and mindfulness. My approach is gentle, body-centered, and deeply compassionate.',
+  ARRAY['Trauma', 'Anxiety', 'Life Transitions', 'PTSD', 'Grief'],
+  ARRAY['Somatic Therapy', 'EMDR', 'Mindfulness', 'IFS'],
+  'I believe healing happens in the body as much as the mind. My sessions create a safe container for you to explore difficult emotions at your own pace, using breath, movement, and gentle inquiry.',
+  12,
+  ARRAY['English', 'Mandarin'],
+  ARRAY['Safe and non-judgmental', 'Helped me reconnect with my body', 'Trauma-sensitive approach', 'Life-changing EMDR sessions'],
+  150.00, 60,
+  ARRAY['Monday', 'Wednesday', 'Friday'],
+  4.9, 127, true
+),
+(
+  'James Okafor',
+  'Relationship & Divorce Recovery Coach',
+  'Navigating the end of a relationship is one of life''s hardest challenges. I help people rebuild their identity, process grief, and rediscover joy after divorce or breakup.',
+  ARRAY['Divorce Recovery', 'Relationship Issues', 'Self-Worth', 'Anxiety', 'Depression'],
+  ARRAY['Cognitive Behavioral Therapy', 'Narrative Therapy', 'Coaching', 'Breathwork'],
+  'My work is practical and forward-focused. We acknowledge the pain, process it fully, then build a clear path toward the life you actually want.',
+  8,
+  ARRAY['English'],
+  ARRAY['Helped me find myself again', 'Practical tools that actually work', 'Non-judgmental about my divorce', 'Rebuilt my confidence'],
+  120.00, 60,
+  ARRAY['Tuesday', 'Thursday', 'Saturday'],
+  4.8, 89, true
+),
+(
+  'Sofia Reyes',
+  'Anxiety & Burnout Specialist',
+  'I work with high-achievers, caregivers, and anyone feeling overwhelmed by modern life. My specialty is helping people move from chronic stress and burnout back to a grounded, energized state.',
+  ARRAY['Anxiety', 'Burnout', 'Stress Management', 'Work-Life Balance', 'Perfectionism'],
+  ARRAY['ACT', 'Nervous System Regulation', 'Mindfulness', 'Yoga Therapy'],
+  'I combine evidence-based therapy with nervous system science. We work on both the thoughts driving your anxiety AND the physical patterns keeping you stuck in fight-or-flight.',
+  10,
+  ARRAY['English', 'Spanish'],
+  ARRAY['Finally understood my anxiety', 'Practical nervous system tools', 'Helped me set boundaries', 'Reduced my panic attacks significantly'],
+  135.00, 50,
+  ARRAY['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+  4.9, 203, true
+),
+(
+  'Dr. Amir Hassan',
+  'Grief Counselor & Spiritual Healer',
+  'Loss takes many forms — a person, a relationship, a dream, an identity. I hold space for all kinds of grief with deep compassion, helping you integrate loss and find meaning again.',
+  ARRAY['Grief', 'Loss', 'Bereavement', 'Existential Questions', 'Depression'],
+  ARRAY['Grief Therapy', 'Spiritual Counseling', 'Meditation', 'Expressive Arts'],
+  'I honor both the psychological and spiritual dimensions of grief. My sessions are slow, spacious, and deeply human — there is no rushing through loss.',
+  15,
+  ARRAY['English', 'Arabic', 'French'],
+  ARRAY['Held space beautifully', 'Helped me find meaning in loss', 'Deeply compassionate', 'Spiritual without being religious'],
+  140.00, 60,
+  ARRAY['Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  5.0, 64, true
+),
+(
+  'Priya Nair',
+  'Women''s Empowerment & Identity Coach',
+  'I work with women navigating major life changes — career pivots, motherhood, midlife transitions, and reclaiming their voice. My approach blends psychology, feminism, and ancient wisdom.',
+  ARRAY['Women''s Issues', 'Identity', 'Life Transitions', 'Self-Confidence', 'Boundaries'],
+  ARRAY['Feminist Therapy', 'Coaching', 'Journaling', 'Breathwork', 'Ritual'],
+  'I believe every woman carries deep wisdom. My role is to help you access it, trust it, and build a life that truly reflects who you are — not who you were told to be.',
+  7,
+  ARRAY['English', 'Hindi', 'Malayalam'],
+  ARRAY['Helped me find my voice', 'Deeply empowering', 'Understood cultural pressures', 'Transformed my relationship with myself'],
+  110.00, 60,
+  ARRAY['Monday', 'Wednesday', 'Friday', 'Sunday'],
+  4.7, 156, true
+),
+(
+  'Marcus Webb',
+  'Men''s Mental Health & Anger Coach',
+  'I specialize in helping men navigate emotions they were never taught to process — anger, shame, vulnerability, and grief. My work is direct, practical, and judgment-free.',
+  ARRAY['Men''s Issues', 'Anger Management', 'Emotional Intelligence', 'Relationships', 'Depression'],
+  ARRAY['CBT', 'Somatic Work', 'Coaching', 'Mindfulness'],
+  'Men deserve real support too. I create a space where you can be honest about what''s actually going on — no toxic positivity, no judgment, just real work toward real change.',
+  9,
+  ARRAY['English'],
+  ARRAY['Finally a therapist who gets men', 'Helped me understand my anger', 'Practical and no-nonsense', 'Changed how I show up in relationships'],
+  125.00, 60,
+  ARRAY['Tuesday', 'Thursday', 'Saturday'],
+  4.8, 98, true
+);
