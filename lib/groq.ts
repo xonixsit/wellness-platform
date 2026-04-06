@@ -5,15 +5,24 @@ export const groq = new Groq({
 });
 
 /**
- * Generate embeddings using Groq's embedding model.
- * Groq uses "nomic-embed-text-v1.5" (768 dims) for embeddings.
+ * Generate embeddings using Hugging Face Inference API.
+ * nomic-embed-text-v1.5 → 768 dims
  */
 export async function generateEmbedding(text: string): Promise<number[]> {
-  const response = await groq.embeddings.create({
-    model: "nomic-embed-text-v1.5",
-    input: text,
-  });
-  return response.data[0].embedding;
+  const res = await fetch(
+    "https://router.huggingface.co/hf-inference/models/BAAI/bge-base-en-v1.5",
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.HF_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ inputs: text }),
+    }
+  );
+  if (!res.ok) throw new Error(`Embedding API error: ${res.status}`);
+  const data = await res.json();
+  return Array.isArray(data[0]) ? data[0] : data;
 }
 
 /**
